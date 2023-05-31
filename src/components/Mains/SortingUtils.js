@@ -25,6 +25,6 @@ export const sortData = (data, sortColumn, sortDirection) => {
     { column: 'name', label: 'Name (A-Z)' },
     { column: 'username', label: 'Username (A-Z)' },
     { column: 'email', label: 'Email (A-Z)' },
-    { column: 'phone', label: 'Phone (A-Z)' },
+    { column: 'phone', label: 'Phone' },
   ];
   

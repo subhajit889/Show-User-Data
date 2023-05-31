@@ -1,0 +1,207 @@
+.users-data-grid {
+    margin: 3% 10% 0% 10%;
+    font-family: Arial, sans-serif;
+    height: auto; /* Adjusted height */
+    overflow: auto; /* Added overflow property */
+    text-align: center;
+  }
+  
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;
+  }
+  
+  .search-input {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .add-user-btn {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .add-user-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .users-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .users-table th,
+  .users-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .users-table th {
+    cursor: pointer;
+  }
+  
+  .sort-button-container {
+    position: relative;
+  }
+  
+  .sort-button {
+    padding: 5px;
+    background-color: #d397f7;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px
+  }
+  
+  .arrow {
+    margin-left: 5px;
+    font-size: 12px;
+  }
+  
+  .arrow.up:before {
+    content: '\\2191';
+  }
+  
+  .arrow.down:before {
+    content: '\\2193';
+  }
+  
+  .sort-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    background-color: #ddcdcd;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+  }
+  
+  .sort-options button {
+    padding: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+  }
+
+  .sort-options button:hover{
+    background-color: #547fad;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .pagination-btn {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .edit-btn {
+    padding: 5px 15px;
+    background-color: #64ecc4;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .edit-btn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Media Queries */
+  
+  @media screen and (max-width: 768px) {
+    .users-data-grid {
+      margin: 10px;
+    }
+  
+    .search-input {
+      margin-bottom: 5px;
+    }
+  
+    .add-user-btn {
+      padding: 8px;
+    }
+  
+    .pagination-btn {
+      padding: 3px 8px;
+      font-size: 12px;
+    }
+  
+    .edit-btn {
+      padding: 3px 8px;
+      font-size: 12px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .users-data-grid {
+      margin: 5px;
+    }
+  
+    .search-input {
+      padding: 5px;
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+  
+    .add-user-btn {
+      padding: 5px;
+      font-size: 12px;
+    }
+  
+    .users-table th,
+    .users-table td {
+      padding: 5px;
+      font-size: 12px;
+    }
+  
+    .arrow {
+      font-size: 10px;
+    }
+  
+    .sort-options button {
+      padding: 5px;
+      font-size: 12px;
+    }
+  
+    .pagination-btn {
+      padding: 3px 6px;
+      font-size: 10px;
+    }
+  
+    .edit-btn {
+      padding: 3px 6px;
+      font-size: 10px;
+    }
+  }
+  
+  

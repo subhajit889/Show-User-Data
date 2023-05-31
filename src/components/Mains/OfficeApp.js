@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import EditContact from './EditConract';
 import AddUser from './Adduser';
-import { fetchUsers } from './Apihelper';
-import "./chatapp.css";
+import { fetchUsers } from '../api/Apihelper';
+import "../styles/chatapp.css";
 import { sortData, sortOptions } from './SortingUtils';
 
-const ChatApp = () => {
+const OfficeApp = () => {
   const [users, setUsers] = useState([]);
   const [editingContact, setEditingContact] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(5);
+  const [itemsPerPage] = useState(4);
   const [searchTerm, setSearchTerm] = useState('');
   const [sortColumn, setSortColumn] = useState(null);
   const [sortDirection, setSortDirection] = useState('asc');
@@ -68,6 +68,10 @@ const ChatApp = () => {
     setEditingContact(null);
   };
 
+  const handleCancel = () => {
+    setEditingContact(null);
+  };
+
   const handleSortOptionsToggle = () => {
     setShowSortOptions(!showSortOptions);
   };
@@ -79,6 +83,7 @@ const ChatApp = () => {
 
   return (
     <div className="users-data-grid">
+      <h1>Showing Your Employee's Data-base</h1>
       <input
         type="text"
         placeholder="Search..."
@@ -89,7 +94,7 @@ const ChatApp = () => {
 
       {!showAddUser ? (
         <button className="add-user-btn" onClick={() => setShowAddUser(true)}>
-          Add User
+          Create User
         </button>
       ) : (
         <AddUser onAddUser={handleAddUser} onCancel={() => setShowAddUser(false)} />
@@ -125,7 +130,6 @@ const ChatApp = () => {
                   {sortColumn && (
                     <>
                       ({sortColumn} {sortDirection === 'asc' ? 'A-Z' : 'Z-A'})
-                      <span className={`arrow ${showSortOptions ? 'up' : 'down'}`} />
                     </>
                   )}
                 </button>
@@ -175,10 +179,10 @@ const ChatApp = () => {
         </button>
       </div>
       {editingContact && (
-        <EditContact contact={editingContact} onSaveContact={handleSaveContact} />
+        <EditContact contact={editingContact} onSaveContact={handleSaveContact} onCancel={handleCancel} />
       )}
     </div>
   );
 };
 
-export default ChatApp;
+export default OfficeApp;

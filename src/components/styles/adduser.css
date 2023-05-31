@@ -1,0 +1,72 @@
+.add-user-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 15px auto;
+    text-align: center;
+  }
+  
+  .add-user-form h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+  }
+  
+  .add-user-form input[type='text'],
+  .add-user-form input[type='email'] {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .add-user-form button[type='submit'] {
+    padding: 10px 10px;
+    font-size: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .add-user-form button[type='button'].cancel-btn {
+    padding: 10px 10px;
+    font-size: 15px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .add-user-form button[type='button'].cancel-btn:hover {
+    background-color: #c82333;
+  }
+  
+  
+  .add-user-form button[type='submit']:hover {
+    background-color: #0056b3;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .add-user-form {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+    
+    .add-user-form h2 {
+      font-size: 16px;
+    }
+    
+    .add-user-form input[type='text'],
+    .add-user-form input[type='email'] {
+      font-size: 12px;
+    }
+    
+    .add-user-form button[type='submit'] {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }

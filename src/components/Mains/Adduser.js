@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './adduser.css';
+import '..//styles/adduser.css';
 
-const AddUser = ({ onAddUser }) => {
+const AddUser = ({ onAddUser, onCancel }) => {
   const [newUser, setNewUser] = useState({ name: '', username: '', email: '', phone: '' });
   const [error, setError] = useState('');
 
@@ -23,9 +23,15 @@ const AddUser = ({ onAddUser }) => {
     setError('');
   };
 
+  const handleCancel = () => {
+    onCancel();
+    setNewUser({ name: '', username: '', email: '', phone: '' });
+    setError('');
+  };
+
   return (
     <form className="add-user-form" onSubmit={handleAddUser}>
-      <h2>Add User</h2>
+      <h2>Create a New User</h2>
       {error && <p className="error">{error}</p>}
       <input
         type="text"
@@ -55,9 +61,16 @@ const AddUser = ({ onAddUser }) => {
         value={newUser.phone}
         onChange={handleInputChange}
       />
-      <button type="submit">Add</button>
+      <div>
+        <button type="submit">Add User </button>
+        <button type="button" className="cancel-btn" onClick={handleCancel}>
+  Cancel
+</button>
+
+      </div>
     </form>
   );
 };
 
 export default AddUser;
+

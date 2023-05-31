@@ -1,11 +1,10 @@
 import React from 'react'
-import './App.css';
-import ChatApp from './ChatApp';
+import OfficeApp from './components/Mains/OfficeApp'
 
 const App = () => {
   return (
     <>
-      <ChatApp />
+      <OfficeApp />
     </>
   )
 }
